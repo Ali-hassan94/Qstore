@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/redux/store";
 import CheckoutSteps from "@/components/checkout/CheckoutSteps";
 import {
+  setStep,
   setShippingAddress,
   setPaymentMethod,
   setCouponCode,
