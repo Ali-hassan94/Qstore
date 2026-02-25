@@ -1,12 +1,12 @@
-/*
-========================================
-Pagination Component
-========================================
-Page numbers render karta hai.
-Reusable component.
-*/
+interface ProductPaginationProps {
+  currentPage: number;
+  setPage: React.Dispatch<React.SetStateAction<number>>;
+}
 
-export default function ProductPagination({ currentPage, setPage }: any) {
+export default function ProductPagination({
+  currentPage,
+  setPage,
+}: ProductPaginationProps) {
   return (
     <div className="flex justify-center gap-3 mt-10">
       <button
