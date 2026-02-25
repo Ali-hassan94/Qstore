@@ -1,6 +1,6 @@
 // Redux Toolkit ka main function jo store banata hai
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
-
+import checkoutReducer from "./features/checkoutSlice";
 // RTK Query API slice (backend communication ke liye)
 import { apiSlice } from "./api/apiSlice";
 
@@ -32,11 +32,10 @@ Big projects me hamesha combineReducers use hota hai.
 */
 
 const rootReducer = combineReducers({
-  auth: authReducer, // login/logout state
-  cart: cartReducer, // cart state
-  wishlist: wishlistReducer, // wishlist state
-
-  // RTK Query reducer (API cache store karta hai)
+  auth: authReducer,
+  cart: cartReducer,
+  wishlist: wishlistReducer,
+  checkout: checkoutReducer, // ✅ Add this
   [apiSlice.reducerPath]: apiSlice.reducer,
 });
 
